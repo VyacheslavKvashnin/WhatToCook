@@ -56,15 +56,63 @@
 		BD2507F927F1F7AA00BF8331 /* WhatToCook */ = {
 			isa = PBXGroup;
 			children = (
-				BD2507FA27F1F7AA00BF8331 /* AppDelegate.swift */,
-				BD2507FC27F1F7AA00BF8331 /* SceneDelegate.swift */,
-				BD2507FE27F1F7AA00BF8331 /* ViewController.swift */,
-				BD25080027F1F7AA00BF8331 /* Main.storyboard */,
-				BD25080327F1F7AB00BF8331 /* Assets.xcassets */,
-				BD25080527F1F7AB00BF8331 /* LaunchScreen.storyboard */,
-				BD25080827F1F7AB00BF8331 /* Info.plist */,
+				BD25080E27F1F7D900BF8331 /* ViewControllers */,
+				BD25081227F1F81600BF8331 /* Models */,
+				BD25081327F1F82300BF8331 /* Services */,
+				BD25081027F1F7FE00BF8331 /* Storyboards */,
+				BD25080F27F1F7F000BF8331 /* App */,
+				BD25081127F1F80C00BF8331 /* Resurces */,
 			);
 			path = WhatToCook;
+			sourceTree = "<group>";
+		};
+		BD25080E27F1F7D900BF8331 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD2507FE27F1F7AA00BF8331 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD25080F27F1F7F000BF8331 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BD2507FA27F1F7AA00BF8331 /* AppDelegate.swift */,
+				BD2507FC27F1F7AA00BF8331 /* SceneDelegate.swift */,
+				BD25080827F1F7AB00BF8331 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BD25081027F1F7FE00BF8331 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BD25080027F1F7AA00BF8331 /* Main.storyboard */,
+				BD25080527F1F7AB00BF8331 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BD25081127F1F80C00BF8331 /* Resurces */ = {
+			isa = PBXGroup;
+			children = (
+				BD25080327F1F7AB00BF8331 /* Assets.xcassets */,
+			);
+			path = Resurces;
+			sourceTree = "<group>";
+		};
+		BD25081227F1F81600BF8331 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD25081327F1F82300BF8331 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +339,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P745L5C6BY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WhatToCook/Info.plist;
+				INFOPLIST_FILE = WhatToCook/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P745L5C6BY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WhatToCook/Info.plist;
+				INFOPLIST_FILE = WhatToCook/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
