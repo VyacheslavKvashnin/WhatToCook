@@ -9,36 +9,38 @@ import UIKit
 
 class IngredientsTableViewController: UITableViewController {
     
+    
+    @IBOutlet var questionsProgress: UIProgressView!
+    
     private var ingredientIndex = 0
-    private var questions: [Question]!
+    private var questions = [Question]()
+    private var userAnswers = [Answer]()
     private let uncheckedImage = UIImage(systemName: "circle")
     private let checkedImage = UIImage(systemName: "checkmark.circle")
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        questions = Question.getQuestions()
-        tableView.allowsMultipleSelection = true
-        
+        appInit()
     }
+    
     // MARK: - Table view data source
-
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let question = getQuestion(ingredientIndex: ingredientIndex) else { return nil}
+        return question.title
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let ingredientType = getIngredientType(forIndex: ingredientIndex) else { return 0 }
-        if let question = getQuestion(for: ingredientType) {
-            return question.answers.count
-        } else {
-            return 0
-        }
+        guard let answers = getAnswers(ingredientIndex: ingredientIndex) else { return 0 }
+        return answers.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientID", for: indexPath)
         var cellContent = cell.defaultContentConfiguration()
-        guard let ingredientType = getIngredientType(forIndex: ingredientIndex) else { return cell }
-        guard let question = getQuestion(for: ingredientType ) else { return cell }
-        let answers = question.answers
+        guard let answers = getAnswers(ingredientIndex: ingredientIndex) else { return cell}
         
         cell.accessoryView = UIImageView(image: uncheckedImage)
         cellContent.text = answers[indexPath.row].title
@@ -60,30 +62,27 @@ class IngredientsTableViewController: UITableViewController {
     }
     
     @IBAction func nextButton(_ sender: UIBarButtonItem) {
-        let ingredientCount = IngredientType.allCases.count
-        if ingredientIndex < ingredientCount {
-            ingredientIndex += 1
-            navigationItem.title = "Вопрос \(ingredientIndex+1) из \(ingredientCount)"
-            
+        ingredientIndex += 1
+        if ingredientIndex < IngredientType.allCases.count{
+            addSelectedAnswers()
+            updateQuestionsProgress()
+            tableView.reloadData()
         } else {
-            
+            performSegue(withIdentifier: "resultViewID", sender: nil)
         }
-        tableView.reloadData()
     }
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        //Transfer user answers to resultVC
     }
-    */
+    
 
 }
 //MARK: - Private Methods
 extension IngredientsTableViewController {
-    private func getQuestion(for ingredientType: IngredientType) -> Question? {
+    private func getQuestion(ingredientIndex: Int) -> Question? {
+        guard let ingredientType = getIngredientType(index: ingredientIndex) else { return nil }
         for question in questions {
             if question.type == ingredientType {
                 return question
@@ -92,7 +91,7 @@ extension IngredientsTableViewController {
     return nil
     }
     
-    private func getIngredientType(forIndex index: Int) -> IngredientType? {
+    private func getIngredientType(index: Int) -> IngredientType? {
         var currentIndex = 0
         for ingredient in IngredientType.allCases {
             if currentIndex == index {
@@ -101,5 +100,31 @@ extension IngredientsTableViewController {
             currentIndex += 1
         }
         return nil
+    }
+    
+    private func appInit() {
+        questions = Question.getQuestions()
+        tableView.allowsMultipleSelection = true
+        navigationItem.title = "Что готовим?"
+        updateQuestionsProgress()
+    }
+    
+    private func updateQuestionsProgress() {
+        let currentProgress = questionsProgress.progress
+        let newProgress = 1 / Float(IngredientType.allCases.count) + currentProgress
+        questionsProgress.setProgress(newProgress, animated: true)
+    }
+    
+    private func addSelectedAnswers() {
+        guard let indexPartsForSelectedRows = tableView.indexPathsForSelectedRows else { return }
+        guard let answers = getAnswers(ingredientIndex: ingredientIndex) else { return }
+        for indexPart in indexPartsForSelectedRows {
+            userAnswers.append(answers[indexPart.row])
+        }
+    }
+    
+    private func getAnswers(ingredientIndex: Int) -> [Answer]? {
+        guard let question = getQuestion(ingredientIndex: ingredientIndex ) else { return nil }
+        return question.answers
     }
 }

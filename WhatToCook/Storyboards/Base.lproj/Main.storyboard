@@ -16,9 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <progressView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="HqH-qF-4xh">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="2.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </progressView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ingredientID" id="UfZ-ss-VOL">
-                                <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
+                                <rect key="frame" x="0.0" y="47" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UfZ-ss-VOL" id="Vrs-op-4KO">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -39,10 +43,30 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="questionsProgress" destination="HqH-qF-4xh" id="oAz-B4-6Iu"/>
+                        <segue destination="cI1-1m-tqI" kind="show" identifier="resultViewID" id="JKE-jN-FnJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqq-UQ-8Vv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2449" y="-654"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="krV-b8-O64">
+            <objects>
+                <viewController id="cI1-1m-tqI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T0z-8N-Xbv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JIP-e0-CO2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8od-oZ-ub0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrh-g2-JeJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3242" y="-655"/>
         </scene>
         <!--Жидкости-->
         <scene sceneID="tne-QT-ifu">
@@ -526,11 +550,11 @@
             </objects>
             <point key="canvasLocation" x="6615" y="31"/>
         </scene>
-        <!--Item-->
+        <!--Рецепт-->
         <scene sceneID="Vp7-h5-Ff5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ye6-nB-7yj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FO0-2E-ZYy"/>
+                    <tabBarItem key="tabBarItem" title="Рецепт" image="play" catalog="system" id="FO0-2E-ZYy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="9HR-ek-FK3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
@@ -569,6 +593,7 @@
     <resources>
         <image name="fork.knife.circle" catalog="system" width="128" height="121"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="play" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
