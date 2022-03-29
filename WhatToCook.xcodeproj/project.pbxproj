@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0EDFED27F339D500DBCE94 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EDFEC27F339D500DBCE94 /* Question.swift */; };
+		BD0EDFF027F341B900DBCE94 /* DishesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EDFEF27F341B900DBCE94 /* DishesManager.swift */; };
 		BD2507FB27F1F7AA00BF8331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2507FA27F1F7AA00BF8331 /* AppDelegate.swift */; };
 		BD2507FD27F1F7AA00BF8331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2507FC27F1F7AA00BF8331 /* SceneDelegate.swift */; };
 		BD2507FF27F1F7AA00BF8331 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2507FE27F1F7AA00BF8331 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0EDFEC27F339D500DBCE94 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		BD0EDFEF27F341B900DBCE94 /* DishesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesManager.swift; sourceTree = "<group>"; };
 		BD2507F727F1F7AA00BF8331 /* WhatToCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2507FA27F1F7AA00BF8331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD2507FC27F1F7AA00BF8331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD0EDFEB27F339C200DBCE94 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD0EDFEC27F339D500DBCE94 /* Question.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD0EDFEE27F3417200DBCE94 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD0EDFEF27F341B900DBCE94 /* DishesManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		BD2507EE27F1F7A900BF8331 = {
 			isa = PBXGroup;
 			children = (
@@ -57,8 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				BD25080E27F1F7D900BF8331 /* ViewControllers */,
-				BD25081227F1F81600BF8331 /* Models */,
-				BD25081327F1F82300BF8331 /* Services */,
+				BD0EDFEB27F339C200DBCE94 /* Models */,
+				BD0EDFEE27F3417200DBCE94 /* Services */,
 				BD25081027F1F7FE00BF8331 /* Storyboards */,
 				BD25080F27F1F7F000BF8331 /* App */,
 				BD25081127F1F80C00BF8331 /* Resurces */,
@@ -99,20 +119,6 @@
 				BD25080327F1F7AB00BF8331 /* Assets.xcassets */,
 			);
 			path = Resurces;
-			sourceTree = "<group>";
-		};
-		BD25081227F1F81600BF8331 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BD25081327F1F82300BF8331 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2507FF27F1F7AA00BF8331 /* ViewController.swift in Sources */,
+				BD0EDFF027F341B900DBCE94 /* DishesManager.swift in Sources */,
+				BD0EDFED27F339D500DBCE94 /* Question.swift in Sources */,
 				BD2507FB27F1F7AA00BF8331 /* AppDelegate.swift in Sources */,
 				BD2507FD27F1F7AA00BF8331 /* SceneDelegate.swift in Sources */,
 			);
