@@ -62,14 +62,16 @@ class IngredientsTableViewController: UITableViewController {
     }
     
     @IBAction func nextButton(_ sender: UIBarButtonItem) {
-        ingredientIndex += 1
-        if ingredientIndex < IngredientType.allCases.count{
+        if ingredientIndex < IngredientType.allCases.count - 1 {
             addSelectedAnswers()
             updateQuestionsProgress()
+            ingredientIndex += 1
             tableView.reloadData()
         } else {
+            addSelectedAnswers()
             performSegue(withIdentifier: "resultViewID", sender: nil)
         }
+        
     }
     
     // MARK: - Navigation
