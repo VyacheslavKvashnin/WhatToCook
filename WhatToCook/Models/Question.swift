@@ -68,3 +68,5 @@ enum IngredientType {
 struct Answer {
     let title: String
 }
+
+extension IngredientType: CaseIterable { }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0AF3A827F366B60068BBEC /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF3A727F366B60068BBEC /* IngredientsTableViewController.swift */; };
 		BD0EDFED27F339D500DBCE94 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EDFEC27F339D500DBCE94 /* Question.swift */; };
 		BD0EDFF027F341B900DBCE94 /* DishesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EDFEF27F341B900DBCE94 /* DishesManager.swift */; };
 		BD2507FB27F1F7AA00BF8331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2507FA27F1F7AA00BF8331 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B0AF3A727F366B60068BBEC /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
 		BD0EDFEC27F339D500DBCE94 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		BD0EDFEF27F341B900DBCE94 /* DishesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesManager.swift; sourceTree = "<group>"; };
 		BD2507F727F1F7AA00BF8331 /* WhatToCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BD2507FE27F1F7AA00BF8331 /* ViewController.swift */,
+				8B0AF3A727F366B60068BBEC /* IngredientsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				BD0EDFF027F341B900DBCE94 /* DishesManager.swift in Sources */,
 				BD0EDFED27F339D500DBCE94 /* Question.swift in Sources */,
 				BD2507FB27F1F7AA00BF8331 /* AppDelegate.swift in Sources */,
+				8B0AF3A827F366B60068BBEC /* IngredientsTableViewController.swift in Sources */,
 				BD2507FD27F1F7AA00BF8331 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
