@@ -76,7 +76,8 @@ class IngredientsTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Transfer user answers to resultVC
+        guard let resultVC = segue.destination as? ResultViewController else { return }
+        resultVC.userAnswers = userAnswers
     }
     
 
