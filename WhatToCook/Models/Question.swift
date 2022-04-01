@@ -22,7 +22,8 @@ struct Question {
                     Answer(title: "Вода"),
                     Answer(title: "Молоко"),
                     Answer(title: "Квас"),
-                    Answer(title: "Kефир")
+                    Answer(title: "Kефир"),
+                    Answer(title: "Подсолнечное масло")
                 ]),
             Question(
                 title: "Сыпучие продукты",

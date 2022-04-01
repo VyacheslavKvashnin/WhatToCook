@@ -52,8 +52,11 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultID", for: indexPath)
         
+        cell.accessoryType = .disclosureIndicator
+        
         var content = cell.defaultContentConfiguration()
         let currentIndex = Array(nameDishes.keys)[indexPath.row]
+        content.image = UIImage(systemName: "fork.knife.circle")
         content.text = currentIndex
         cell.contentConfiguration = content
         return cell
