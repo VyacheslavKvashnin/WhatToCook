@@ -13,18 +13,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var recipeLabel: UILabel!
     
     var nameDishes: [String: String] = [:]
-
+    var currentIndex: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dishNameLabel.text = Array(nameDishes).first?.key
-        recipeLabel.text = Array(nameDishes).first?.value
-        
-        print(nameDishes)
-        
-    }
-    
-    private func labelText() {
+        dishNameLabel.text = Array(nameDishes)[currentIndex].key
+        recipeLabel.text = Array(nameDishes)[currentIndex].value
         
     }
 }

@@ -45,64 +45,44 @@
                     </navigationItem>
                     <connections>
                         <outlet property="questionsProgress" destination="HqH-qF-4xh" id="oAz-B4-6Iu"/>
-                        <segue destination="cI1-1m-tqI" kind="show" identifier="resultViewID" id="JKE-jN-FnJ"/>
+                        <segue destination="iig-gI-1hz" kind="show" identifier="resultViewID" id="bn6-Hc-IE7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqq-UQ-8Vv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2798" y="-682"/>
+            <point key="canvasLocation" x="2496" y="-682"/>
         </scene>
-        <!--Результат-->
-        <scene sceneID="krV-b8-O64">
+        <!--Результаты-->
+        <scene sceneID="tZS-cq-Lub">
             <objects>
-                <viewController id="cI1-1m-tqI" customClass="ResultViewController" customModule="WhatToCook" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="T0z-8N-Xbv">
+                <tableViewController id="iig-gI-1hz" customClass="ResultsTableViewController" customModule="WhatToCook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="qUJ-rE-f0B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RHc-1g-7t6">
-                                <rect key="frame" x="0.0" y="91" width="320" height="477"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultID" id="du2-mt-ewt">
-                                        <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="du2-mt-ewt" id="NXB-QA-LcZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Pfv-oR-xgL" kind="show" id="PSt-UV-ohC"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="cI1-1m-tqI" id="YTE-LE-LKy"/>
-                                    <outlet property="delegate" destination="cI1-1m-tqI" id="LzH-8X-r7a"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="JIP-e0-CO2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="RHc-1g-7t6" firstAttribute="leading" secondItem="JIP-e0-CO2" secondAttribute="leading" id="Znh-sp-AxY"/>
-                            <constraint firstItem="RHc-1g-7t6" firstAttribute="top" secondItem="JIP-e0-CO2" secondAttribute="top" id="ap6-dZ-jJh"/>
-                            <constraint firstAttribute="bottom" secondItem="RHc-1g-7t6" secondAttribute="bottom" id="qeX-eq-XbH"/>
-                            <constraint firstItem="RHc-1g-7t6" firstAttribute="trailing" secondItem="JIP-e0-CO2" secondAttribute="trailing" id="wl9-oJ-9yo"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Результат" id="8od-oZ-ub0">
-                        <barButtonItem key="rightBarButtonItem" title="Еще раз" id="eZh-HJ-021">
-                            <connections>
-                                <segue destination="lrG-i9-zDF" kind="unwind" unwindAction="unwindFor:towards:" id="uUn-0w-StL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xrh-g2-JeJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="lrG-i9-zDF" userLabel="Exit" sceneMemberID="exit"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultID" id="lSf-n7-KZU">
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lSf-n7-KZU" id="msA-s7-XQc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Pfv-oR-xgL" kind="show" id="RqS-Aj-03j"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iig-gI-1hz" id="CEK-vA-Cf1"/>
+                            <outlet property="delegate" destination="iig-gI-1hz" id="cCO-VI-zRI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Результаты" id="kKX-8Z-80f"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Okp-K9-SAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3781.875" y="-682.3943661971831"/>
+            <point key="canvasLocation" x="3306" y="-682"/>
         </scene>
         <!--Рецепт-->
         <scene sceneID="sZw-gf-guG">
@@ -144,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ElR-0p-sd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4571" y="-682"/>
+            <point key="canvasLocation" x="4078" y="-682"/>
         </scene>
         <!--Разработчики-->
         <scene sceneID="Xfx-Vb-c9x">
@@ -184,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8a-so-Nhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596.875" y="826.05633802816908"/>
+            <point key="canvasLocation" x="2496" y="145"/>
         </scene>
         <!--Рецепт-->
         <scene sceneID="Vp7-h5-Ff5">
@@ -216,8 +196,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-OC-2tu">
                                 <rect key="frame" x="20" y="229" width="280" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пройти опрос" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-AD-xNL">
-                                        <rect key="frame" x="47.5" y="0.0" width="185.5" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что готовим?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-AD-xNL">
+                                        <rect key="frame" x="51" y="0.0" width="178" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -229,7 +209,7 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="9ZQ-ff-zWK" kind="show" id="oHA-ad-a2u"/>
+                                            <segue destination="9ZQ-ff-zWK" kind="show" identifier="introductionView" id="oHA-ad-a2u"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -247,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNT-r5-vKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1712" y="-682"/>
+            <point key="canvasLocation" x="1719" y="-682"/>
         </scene>
         <!--What To Cook-->
         <scene sceneID="lsL-QA-7sr">
@@ -286,7 +266,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKc-0S-Ssy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1599.375" y="826.05633802816908"/>
+            <point key="canvasLocation" x="1718" y="145"/>
         </scene>
     </scenes>
     <resources>
