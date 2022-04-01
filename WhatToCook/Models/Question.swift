@@ -70,9 +70,3 @@ struct Answer {
 }
 
 extension IngredientType: CaseIterable { }
-
-
-struct Dish {
-    let dishName: String
-    let recipe: String
-}
