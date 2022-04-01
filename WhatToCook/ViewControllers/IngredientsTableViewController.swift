@@ -36,7 +36,7 @@ class IngredientsTableViewController: UITableViewController {
         guard let answers = getAnswers(ingredientIndex: ingredientIndex) else { return 0 }
         return answers.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientID", for: indexPath)
         var cellContent = cell.defaultContentConfiguration()
@@ -55,7 +55,7 @@ class IngredientsTableViewController: UITableViewController {
         cell.accessoryView = UIImageView(image: checkedImage)
         
     }
-
+    
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         cell.accessoryView = UIImageView(image: uncheckedImage)
@@ -80,7 +80,7 @@ class IngredientsTableViewController: UITableViewController {
         resultVC.userAnswers = userAnswers
     }
     
-
+    
 }
 //MARK: - Private Methods
 extension IngredientsTableViewController {
@@ -91,7 +91,7 @@ extension IngredientsTableViewController {
                 return question
             }
         }
-    return nil
+        return nil
     }
     
     private func getIngredientType(index: Int) -> IngredientType? {
