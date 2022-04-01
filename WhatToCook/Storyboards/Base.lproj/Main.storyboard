@@ -111,10 +111,36 @@
                     <view key="view" contentMode="scaleToFill" id="Zkr-qf-Yp0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTJ-iQ-PN3">
+                                <rect key="frame" x="20" y="111" width="280" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcW-og-xuy">
+                                <rect key="frame" x="20" y="165" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hNq-Bg-aw7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FcW-og-xuy" firstAttribute="top" secondItem="gTJ-iQ-PN3" secondAttribute="bottom" constant="30" id="3iU-wt-mtF"/>
+                            <constraint firstItem="hNq-Bg-aw7" firstAttribute="trailing" secondItem="gTJ-iQ-PN3" secondAttribute="trailing" constant="20" id="CbW-Wh-WSd"/>
+                            <constraint firstItem="gTJ-iQ-PN3" firstAttribute="leading" secondItem="hNq-Bg-aw7" secondAttribute="leading" constant="20" id="TrO-eh-xJC"/>
+                            <constraint firstItem="gTJ-iQ-PN3" firstAttribute="top" secondItem="hNq-Bg-aw7" secondAttribute="top" constant="20" id="clA-xs-etx"/>
+                            <constraint firstItem="FcW-og-xuy" firstAttribute="leading" secondItem="hNq-Bg-aw7" secondAttribute="leading" constant="20" id="dfD-0V-poT"/>
+                            <constraint firstItem="hNq-Bg-aw7" firstAttribute="trailing" secondItem="FcW-og-xuy" secondAttribute="trailing" constant="20" id="g2Q-mc-5eL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Рецепт" id="JrI-t4-VyP"/>
+                    <connections>
+                        <outlet property="dishNameLabel" destination="gTJ-iQ-PN3" id="Edd-5f-1Ki"/>
+                        <outlet property="recipeLabel" destination="FcW-og-xuy" id="kKZ-Qf-MCG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ElR-0p-sd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

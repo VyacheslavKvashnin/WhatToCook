@@ -12,7 +12,7 @@ class ResultViewController: UIViewController {
     var userAnswers: [Answer] = []
     var newUserAnswers: [String] = []
     
-    var nameDishes: [String] = []
+    var nameDishes: [String: String] = [:]
     
     let dishes: [String: String] = [
         "Куриный суп с яйцом и зеленью." : "Куриное филе, картофель, морковь, лук репчатый, вермишель, зелень петрушки, лавровый лист, соль, перец чёрный молотый, масло растительное, вода",
@@ -38,9 +38,12 @@ class ResultViewController: UIViewController {
     }
     
     private func getCoincidences() {
+        
         for (dish, ingredient) in dishes {
             if ingredient.contains("картофель") {
-                nameDishes.append(dish)
+                let unionArr = zip(dish, ingredient)
+                var dic = Dictionary(uniqueKeysWithValues: unionArr)
+               
             }
         }
     }
@@ -54,9 +57,10 @@ extension ResultViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultID", for: indexPath)
-        
         var content = cell.defaultContentConfiguration()
-        content.text = "Cell"
+        let currentIndex = newUserAnswers[indexPath.row]
+        
+        content.text = currentIndex
         cell.contentConfiguration = content
         return cell
         

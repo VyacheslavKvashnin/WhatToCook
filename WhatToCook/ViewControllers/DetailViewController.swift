@@ -8,9 +8,16 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    @IBOutlet weak var dishNameLabel: UILabel!
+    @IBOutlet weak var recipeLabel: UILabel!
+    
+    var dish: Dish!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
     }
 }
