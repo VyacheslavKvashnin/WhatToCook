@@ -17,6 +17,7 @@ class ResultsTableViewController: UITableViewController {
     
     var dishes = DishesManager.shared
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +42,7 @@ class ResultsTableViewController: UITableViewController {
                 }
             }
         }
+        
     }
     
     // MARK: - Table view data source

@@ -8,9 +8,8 @@
 import UIKit
 
 class IntroductionViewController: UIViewController {
-
-    @IBAction override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
-        dismiss(animated: true)
-    }
+        
+    @IBAction func unwind(segue: UIStoryboardSegue) {}
+    
 }
 
