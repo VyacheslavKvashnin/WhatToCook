@@ -126,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="4078" y="-682"/>
         </scene>
-        <!--Разработчики-->
+        <!--О приложении-->
         <scene sceneID="Xfx-Vb-c9x">
             <objects>
                 <viewController id="OLW-XU-xYm" sceneMemberID="viewController">
@@ -134,37 +134,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ZAH-D0-Nul">
-                                <rect key="frame" x="20" y="176" width="280" height="76"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MZ1-U8-0HJ">
+                                <rect key="frame" x="20" y="101" width="280" height="223.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kostya Andreev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQm-nO-2eh">
-                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Каждый хоть раз в своей жизни задумывался о том, что приготовить." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkx-85-1aE">
+                                        <rect key="frame" x="0.0" y="0.0" width="259" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vyacheslav Kvashnin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy2-2z-BPD">
-                                        <rect key="frame" x="0.0" y="55.5" width="158.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhatToCook избавит Вас от таких мыслей." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDb-Kj-Tr5">
+                                        <rect key="frame" x="0.0" y="71" width="226" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы просто выбираете нужные ингридиенты, которые у Вас есть и из них же в результате получаете разнообразные блюда с рецептами." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akA-2i-NlE">
+                                        <rect key="frame" x="0.0" y="122" width="272.5" height="101.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="MX2-E0-yc7">
+                                <rect key="frame" x="20" y="368" width="158.5" height="131"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разработчики:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROJ-V0-b0m">
+                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bbN-4D-S3V">
+                                        <rect key="frame" x="0.0" y="49" width="158.5" height="82"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jrl-jL-cle">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="36"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kostya Andreev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSB-Yv-4ne">
+                                                        <rect key="frame" x="0.0" y="0.0" width="131" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✉️ daewon@yandex.ru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70B-we-IJr">
+                                                        <rect key="frame" x="0.0" y="21.5" width="131" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fp8-tP-C94">
+                                                <rect key="frame" x="0.0" y="46" width="158.5" height="36"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vyacheslav Kvashnin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvx-F3-RZ1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✉️ komplektan@mail.ru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdY-S0-2s1">
+                                                        <rect key="frame" x="0.0" y="21.5" width="158.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SAe-bH-2GD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SAe-bH-2GD" firstAttribute="trailing" secondItem="ZAH-D0-Nul" secondAttribute="trailing" constant="20" id="3wf-u5-d00"/>
-                            <constraint firstItem="ZAH-D0-Nul" firstAttribute="top" secondItem="SAe-bH-2GD" secondAttribute="top" constant="85" id="BEe-o6-MtW"/>
-                            <constraint firstItem="ZAH-D0-Nul" firstAttribute="leading" secondItem="SAe-bH-2GD" secondAttribute="leading" constant="20" id="IeR-iZ-QSC"/>
+                            <constraint firstItem="MZ1-U8-0HJ" firstAttribute="leading" secondItem="vBG-XU-cEg" secondAttribute="leading" constant="20" id="9mp-0B-tcI"/>
+                            <constraint firstItem="MX2-E0-yc7" firstAttribute="top" secondItem="MZ1-U8-0HJ" secondAttribute="bottom" constant="43.5" id="DEO-Wc-ZR2"/>
+                            <constraint firstAttribute="trailing" secondItem="MZ1-U8-0HJ" secondAttribute="trailing" constant="20" id="Owj-iL-EPX"/>
+                            <constraint firstItem="MX2-E0-yc7" firstAttribute="leading" secondItem="SAe-bH-2GD" secondAttribute="leading" constant="20" id="eY6-io-FHX"/>
+                            <constraint firstItem="MZ1-U8-0HJ" firstAttribute="top" secondItem="SAe-bH-2GD" secondAttribute="top" constant="10" id="qI6-eF-LM9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Разработчики" id="dFz-Gp-hrX"/>
+                    <navigationItem key="navigationItem" title="О приложении" id="dFz-Gp-hrX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8a-so-Nhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496" y="145"/>
+            <point key="canvasLocation" x="2495.625" y="144.71830985915494"/>
         </scene>
         <!--Рецепт-->
         <scene sceneID="Vp7-h5-Ff5">
