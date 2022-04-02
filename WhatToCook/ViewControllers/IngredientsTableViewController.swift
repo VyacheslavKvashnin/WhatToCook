@@ -27,6 +27,7 @@ class IngredientsTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let question = getQuestion(ingredientIndex: ingredientIndex) else { return nil}
         return question.title
